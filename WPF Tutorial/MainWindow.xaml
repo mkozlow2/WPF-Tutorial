@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_Tutorial"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="MainWindow" MinHeight="100" MinWidth="100" Height="160" Width="200">
+    <Grid x:Name="btnGo">
+        <Button x:Name="btnStart" Content="Start" HorizontalAlignment="Center" Margin="0,0,0,40" VerticalAlignment="Center" Width="120" FontWeight="Bold" FontFamily="Times New Roman" FontSize="20" Click="btnStart_Click" Background="#FF09EC3D" BorderBrush="Red" Foreground="#FF0823D1" IsEnabled="False"/>
+        <Button x:Name="btnTime" Content="Czas" HorizontalAlignment="Center" Margin="0,40,0,0" VerticalAlignment="Center" Width="120" FontFamily="Times New Roman" FontWeight="Bold" FontSize="20" MouseEnter="btnTime_MouseEnter" MouseLeave="btnTime_MouseLeave"/>
+        <Button Content="Go!" HorizontalAlignment="Left" Margin="5,5,0,0" VerticalAlignment="Top" Width="20" Height="20" FontFamily="Times New Roman" FontSize="10" FontWeight="Bold" Click="Button_Click"/>
+
+
     </Grid>
 </Window>

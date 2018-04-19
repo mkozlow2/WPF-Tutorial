@@ -24,5 +24,31 @@ namespace WPF_Tutorial
         {
             InitializeComponent();
         }
+
+        private void btnStart_Click(object sender, RoutedEventArgs e)
+        {
+            //btnStart.Opacity = 0.5;
+            //btnStart.Visibility = Visibility.Hidden;
+            MessageBox.Show("Siemandero!");
+            //btnStart.Visibility = Visibility.Visible;
+            //btnStart.Opacity = 1;
+            btnStart.IsEnabled = false;
+        }
+
+        private void btnTime_MouseEnter(object sender, MouseEventArgs e)
+        {
+            DateTime data = DateTime.Now;
+            btnTime.Content = data.ToString("T");
+        }
+
+        private void btnTime_MouseLeave(object sender, MouseEventArgs e)
+        {
+            btnTime.Content = "Czas";
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            btnStart.IsEnabled = true;
+        }
     }
 }
