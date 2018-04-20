@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Kwadrat"
         mc:Ignorable="d"
         Title="Kwadrat" Height="500" Width="800">
-    <Grid>
+    <Grid Background="#19000000">
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
             <RowDefinition Height="60"/>
@@ -47,6 +47,9 @@
         <Label x:Name="lblKolorWyp" Content="Kolor wypełnienia" HorizontalAlignment="Center" Margin="0,50,0,0" Grid.Row="4" VerticalAlignment="Center" FontSize="14" FontFamily="Times New Roman"/>
         <Button x:Name="btnDraw" Content="Rysuj" Grid.Column="1" HorizontalAlignment="Center" Margin="0,0,0,20" Grid.Row="5" VerticalAlignment="Center" Width="200" FontFamily="Times New Roman" FontSize="30" Click="btnDraw_Click" />
         <CheckBox x:Name="cbPrzezroczysty" Content="Półprzezroczysty" Grid.Column="1" HorizontalAlignment="Center" Margin="0,20,0,0" Grid.Row="5" VerticalAlignment="Top"/>
+        <RadioButton x:Name="rbtnUkryj" Content="Ukryj" HorizontalAlignment="Left" Margin="35,0,0,0" Grid.Row="5" VerticalAlignment="Center" Checked="rbtnUkryj_Checked"/>
+        <RadioButton x:Name="rbtnPokaz" Content="Pokaż" HorizontalAlignment="Left" Margin="35,50,0,0" Grid.Row="5" VerticalAlignment="Center" Checked="rbtnPokaz_Checked"/>
+        <Image Grid.Column="2" HorizontalAlignment="Right" Height="100" Margin="0,10,10,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="100" Source="C:\Users\Mateo\Desktop\download.jpg"/>
 
     </Grid>
 </Window>

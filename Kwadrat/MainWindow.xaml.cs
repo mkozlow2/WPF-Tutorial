@@ -72,7 +72,7 @@ namespace Kwadrat
                 btnDraw.IsEnabled = true;
 
             double bok = double.Parse(txtBok.Text);
-            if (bok <= 380)                                                                      //sprawdza czy bok ma właściwy rozmiar
+            if (bok <= 300)                                                                      //sprawdza czy bok ma właściwy rozmiar
             {
                 kwadrat.Height = bok;
                 kwadrat.Width = bok;
@@ -87,7 +87,20 @@ namespace Kwadrat
             {
                 lblKomunikat.Foreground = Brushes.Red;
                 lblKomunikat.Content = "Podany kwadrat jest za duży";
+                btnDraw.IsEnabled = false;
             }
+        }
+
+        private void rbtnUkryj_Checked(object sender, RoutedEventArgs e)
+        {
+            kwadrat.Visibility = Visibility.Hidden;
+            rbtnPokaz.IsChecked = false;
+        }
+
+        private void rbtnPokaz_Checked(object sender, RoutedEventArgs e)
+        {
+            kwadrat.Visibility = Visibility.Visible;
+            rbtnUkryj.IsChecked = false;
         }
     }
 }
