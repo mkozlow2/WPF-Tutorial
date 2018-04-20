@@ -1,0 +1,32 @@
+﻿<Window x:Class="Proste_wiazanie.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Proste_wiazanie"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="200" Width="550">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="57*"/>
+            <ColumnDefinition Width="214*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0">
+            <Label Height="20" Margin="10" Content="Rozmiar" FontSize="16" Padding="0" />
+            <Label Margin="10" Height="20" Content="Kolor" FontSize="16" Padding="0" />
+            <Label Margin="10" Height="20" Content="Tekst" FontSize="16" Padding="0" />
+        </StackPanel>
+        <StackPanel Grid.ColumnSpan="1" Grid.Column="1">
+            <Slider x:Name="slSize" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="20" Margin="10" Minimum="10" Maximum="45" Value="15"/>
+            <ComboBox x:Name="cbKolor" Margin="10" Height="20">
+                <ComboBoxItem Foreground="Red">Red</ComboBoxItem>
+                <ComboBoxItem Foreground="#FF31D600">Green</ComboBoxItem>
+                <ComboBoxItem Foreground="#FF4565F5">Blue</ComboBoxItem>
+                <ComboBoxItem Foreground="Yellow">Yellow</ComboBoxItem>
+                <ComboBoxItem>Black</ComboBoxItem>
+            </ComboBox>
+            <TextBox x:Name="txtText" Margin="10" Height="20" />
+            <TextBox HorizontalAlignment="Left"  TextWrapping="Wrap" Text="{Binding Path=Text, ElementName=txtText, UpdateSourceTrigger=PropertyChanged}" Margin="10" FontSize="{Binding Value, ElementName=slSize}" Grid.Column="1" Foreground="{Binding Path=SelectedItem.Content, ElementName=cbKolor}" BorderBrush="White" />
+        </StackPanel>
+            </Grid>
+</Window>
