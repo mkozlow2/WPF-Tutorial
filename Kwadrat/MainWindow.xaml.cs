@@ -94,13 +94,13 @@ namespace Kwadrat
         private void rbtnUkryj_Checked(object sender, RoutedEventArgs e)
         {
             kwadrat.Visibility = Visibility.Hidden;
-            rbtnPokaz.IsChecked = false;
+       //     rbtnPokaz.IsChecked = false;
         }
 
         private void rbtnPokaz_Checked(object sender, RoutedEventArgs e)
         {
             kwadrat.Visibility = Visibility.Visible;
-            rbtnUkryj.IsChecked = false;
+       //     rbtnUkryj.IsChecked = false;
         }
     }
 }

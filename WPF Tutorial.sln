@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Troll", "Troll\Troll.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kwadrat", "Kwadrat\Kwadrat.csproj", "{24351E80-6670-4FC6-84D7-81B9037E63CE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wiazanie", "Wiazanie\Wiazanie.csproj", "{0F92F54F-66B9-403E-9D10-45F93519D60E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{24351E80-6670-4FC6-84D7-81B9037E63CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24351E80-6670-4FC6-84D7-81B9037E63CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24351E80-6670-4FC6-84D7-81B9037E63CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F92F54F-66B9-403E-9D10-45F93519D60E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F92F54F-66B9-403E-9D10-45F93519D60E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F92F54F-66B9-403E-9D10-45F93519D60E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F92F54F-66B9-403E-9D10-45F93519D60E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
