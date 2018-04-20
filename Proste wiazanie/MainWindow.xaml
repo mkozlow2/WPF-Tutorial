@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Proste_wiazanie"
         mc:Ignorable="d"
-        Title="MainWindow" Height="200" Width="550">
+        Title="MainWindow" Height="250" Width="550">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="57*"/>
@@ -15,6 +15,7 @@
             <Label Height="20" Margin="10" Content="Rozmiar" FontSize="16" Padding="0" />
             <Label Margin="10" Height="20" Content="Kolor" FontSize="16" Padding="0" />
             <Label Margin="10" Height="20" Content="Tekst" FontSize="16" Padding="0" />
+            <Label Margin="10" Height="20" Content="Długość" FontSize="16" Padding="0" />
         </StackPanel>
         <StackPanel Grid.ColumnSpan="1" Grid.Column="1">
             <Slider x:Name="slSize" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="20" Margin="10" Minimum="10" Maximum="45" Value="15"/>
@@ -26,6 +27,7 @@
                 <ComboBoxItem>Black</ComboBoxItem>
             </ComboBox>
             <TextBox x:Name="txtText" Margin="10" Height="20" />
+            <TextBlock x:Name="txtDlugosc" Margin="10" Height="20" Text="{Binding StringFormat={}{0} znaki, Path=Text.Length, ElementName=txtText}"/>
             <TextBox HorizontalAlignment="Left"  TextWrapping="Wrap" Text="{Binding Path=Text, ElementName=txtText, UpdateSourceTrigger=PropertyChanged}" Margin="10" FontSize="{Binding Value, ElementName=slSize}" Grid.Column="1" Foreground="{Binding Path=SelectedItem.Content, ElementName=cbKolor}" BorderBrush="White" />
         </StackPanel>
             </Grid>
