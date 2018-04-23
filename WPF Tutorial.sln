@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wiazanie", "Wiazanie\Wiazan
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proste wiazanie", "Proste wiazanie\Proste wiazanie.csproj", "{9732D6BF-E4B5-4987-996E-C3F44020FE8D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lista Produktow", "Lista Produktow\Lista Produktow.csproj", "{3AC98914-C3BC-4629-BD63-08357292DE7D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{9732D6BF-E4B5-4987-996E-C3F44020FE8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9732D6BF-E4B5-4987-996E-C3F44020FE8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9732D6BF-E4B5-4987-996E-C3F44020FE8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AC98914-C3BC-4629-BD63-08357292DE7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AC98914-C3BC-4629-BD63-08357292DE7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AC98914-C3BC-4629-BD63-08357292DE7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AC98914-C3BC-4629-BD63-08357292DE7D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
