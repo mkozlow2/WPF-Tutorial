@@ -16,6 +16,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
@@ -41,5 +42,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
+        <Button x:Name="btnUsun" Grid.Column="0" Grid.Row="2" Content=" Usuń" HorizontalAlignment="Right" Grid.ColumnSpan="2" Margin="10,10,40,10" Padding="10,1" Click="Usuń_Click"/>
+        <Button x:Name="btnDodaj" Grid.Column="0" Grid.Row="2" Content="Dodaj" HorizontalAlignment="Left" Grid.ColumnSpan="2" Margin="40,10,0,10" Padding="10,1" Click="btnDodaj_Click" />
     </Grid>
 </Window>

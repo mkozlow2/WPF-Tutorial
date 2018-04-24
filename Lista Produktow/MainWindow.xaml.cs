@@ -22,7 +22,7 @@ namespace Lista_Produktow
     /// </summary>
     public partial class MainWindow : Window
     {
-        private ObservableCollection<Produkt> ListaProduktow = null;    //pole typu lista (kolekcja) ObservableCollection<T>
+        internal ObservableCollection<Produkt> ListaProduktow = null;    //pole typu lista (kolekcja) ObservableCollection<T>
         public MainWindow()
         {
             InitializeComponent();
@@ -56,6 +56,20 @@ namespace Lista_Produktow
         private void lstProdukty_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             Window1 okno1 = new Window1(this);
+            okno1.ShowDialog();
+        }
+
+        private void Usuń_Click(object sender, RoutedEventArgs e)
+        {
+            Produkt produktZListy = lstProdukty.SelectedItem as Produkt;
+            MessageBoxResult odpowiedz = MessageBox.Show("Czy wykasować produkt: " + produktZListy.ToString() + "?", "Pytanie", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (odpowiedz == MessageBoxResult.Yes)
+                ListaProduktow.Remove(produktZListy);
+        }
+
+        private void btnDodaj_Click(object sender, RoutedEventArgs e)
+        {
+            Window1 okno1 = new Window1(this, true);
             okno1.ShowDialog();
         }
     }

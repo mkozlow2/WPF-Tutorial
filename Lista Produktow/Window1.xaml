@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Lista_Produktow"
         mc:Ignorable="d"
         Title="Window1" Height="220" Width="350">
-    <Grid x:Name="gridProdukt">
+   <Grid x:Name="gridProdukt">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
@@ -26,8 +26,8 @@
         <TextBox x:Name="txtSztuki" Grid.Column="1" HorizontalAlignment="Center" Height="23"  Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Margin="0,5" Text="{Binding LiczbaSztuk}"/>
         <Label x:Name="lblMagazyn" Content="Magazyn" HorizontalAlignment="Center"  Grid.Row="3" VerticalAlignment="Center"/>
         <TextBox x:Name="txtMagazyn" Grid.Column="1" HorizontalAlignment="Center" Height="23"  Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Margin="0,5" Text="{Binding Magazyn}"/>
-        <Button x:Name="btnPotwierdz" Content="Potwierdź"  Grid.Row="4" VerticalAlignment="Center" Width="120" Height="40" Grid.ColumnSpan="2" HorizontalAlignment="Center" Click="btnPotwierdz_Click"/>
-
+        <Button x:Name="btnPotwierdz" Content="Potwierdź"  Grid.Row="4" VerticalAlignment="Center" Width="120" Height="40" Grid.ColumnSpan="2" HorizontalAlignment="Center"  Click="btnPotwierdz_Click"/>
+      
 
     </Grid>
 </Window>

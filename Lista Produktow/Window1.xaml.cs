@@ -21,27 +21,41 @@ namespace Lista_Produktow
     public partial class Window1 : Window
     {
         private MainWindow mainWindow = null;
+        private bool czyNowyProdukt = false;
+        private Produkt nowyProdukt = null;
         public Window1()
         {
             InitializeComponent();
         }
-        public Window1(MainWindow mainWin)
+        public Window1(MainWindow mainWin, bool czyNowy = false)
         {
             InitializeComponent();
             mainWindow = mainWin;
-            PrzygotujWiazanie();
+            czyNowyProdukt = czyNowy;
+            PrzygotujWiazanie(czyNowyProdukt);
         }
-        private void PrzygotujWiazanie()
+        private void PrzygotujWiazanie(bool czyNowyProdukt)
         {
-            Produkt produktZListy = mainWindow.lstProdukty.SelectedItem as Produkt;
-            if(produktZListy != null)
+            if (czyNowyProdukt == false)
             {
-                gridProdukt.DataContext = produktZListy;
+                Produkt produktZListy = mainWindow.lstProdukty.SelectedItem as Produkt;
+                if (produktZListy != null)
+                {
+                    gridProdukt.DataContext = produktZListy;
+                }
+            }
+            else
+            {
+                nowyProdukt = new Produkt("AA - 00", "", 0, "");
+                gridProdukt.DataContext = nowyProdukt;
             }
         }
         private void btnPotwierdz_Click(object sender, RoutedEventArgs e)
         {
+            if (czyNowyProdukt == true)
+                mainWindow.ListaProduktow.Add(nowyProdukt);
             this.DialogResult = true;
         }
+
     }
 }
