@@ -1,0 +1,33 @@
+﻿<Window x:Class="Lista_Produktow.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lista_Produktow"
+        mc:Ignorable="d"
+        Title="Window1" Height="220" Width="350">
+    <Grid x:Name="gridProdukt">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="lblSymbol" Content="Symbol" HorizontalAlignment="Center"  VerticalAlignment="Center"/>
+        <TextBox x:Name="txtSymbol" Grid.Column="1" HorizontalAlignment="Center" Height="23"  TextWrapping="Wrap"  VerticalAlignment="Center" Width="120" Margin="0,5" Text="{Binding Symbol}"/>
+        <Label x:Name="lblNazwa" Content="Nazwa" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center"/>
+        <TextBox x:Name="txtNazwa" Grid.Column="1" HorizontalAlignment="Center" Height="23"  Grid.Row="1" TextWrapping="Wrap"  VerticalAlignment="Center" Width="120" Margin="0,5" Text="{Binding Nazwa}"/>
+        <Label x:Name="lblSztuki" Content="Liczba sztuk" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center"/>
+        <TextBox x:Name="txtSztuki" Grid.Column="1" HorizontalAlignment="Center" Height="23"  Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Margin="0,5" Text="{Binding LiczbaSztuk}"/>
+        <Label x:Name="lblMagazyn" Content="Magazyn" HorizontalAlignment="Center"  Grid.Row="3" VerticalAlignment="Center"/>
+        <TextBox x:Name="txtMagazyn" Grid.Column="1" HorizontalAlignment="Center" Height="23"  Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Margin="0,5" Text="{Binding Magazyn}"/>
+        <Button x:Name="btnPotwierdz" Content="Potwierdź"  Grid.Row="4" VerticalAlignment="Center" Width="120" Height="40" Grid.ColumnSpan="2" HorizontalAlignment="Center" Click="btnPotwierdz_Click"/>
+
+
+    </Grid>
+</Window>

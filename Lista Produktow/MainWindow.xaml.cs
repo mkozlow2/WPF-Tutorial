@@ -52,5 +52,11 @@ namespace Lista_Produktow
         {
             CollectionViewSource.GetDefaultView(lstProdukty.ItemsSource).Refresh();
         }
+
+        private void lstProdukty_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            Window1 okno1 = new Window1(this);
+            okno1.ShowDialog();
+        }
     }
 }
